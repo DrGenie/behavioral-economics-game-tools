@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .game-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .player {
+            padding: 20px;
+            border: 1px solid #000;
+            margin: 0 20px;
+            text-align: center;
+        }
+        .arrow {
+            font-size: 24px;
+        }
+        .instructions {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trust Game</h1>
+    <div class="game-flow">
+        <div class="player">
+            <p>Sender</p>
+            <p>Send Amount ($)</p>
+        </div>
+        <div class="arrow">➡️ (×3)</div>
+        <div class="player">
+            <p>Receiver</p>
+            <p>Return Amount ($)</p>
+        </div>
+    </div>
+    <div class="instructions">
+        <p>Sender decides how much to send. The amount is tripled, and the Receiver decides how much to return.</p>
+    </div>
+</body>
+</html>
