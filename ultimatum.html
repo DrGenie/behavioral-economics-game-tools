@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimatum Game</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ultimatum Game</h1>
+    </header>
+    <main>
+        <p>Proposers decide how to split $10. Responders accept or reject the offer. Let’s analyze fairness and decision-making!</p>
+        <button onclick="startGame()">Start Simulation</button>
+        <div id="gameOutput"></div>
+    </main>
+    <script>
+        function startGame() {
+            const offers = [];
+            for (let i = 0; i < 10; i++) {
+                const offer = Math.floor(Math.random() * 11); // Random offer between 0 and 10
+                const accept = offer >= 4 ? 'Accepted' : 'Rejected';
+                offers.push(`Offer: $${offer}, ${accept}`);
+            }
+            document.getElementById('gameOutput').innerHTML = offers.join('<br>');
+        }
+    </script>
+    <footer>
+        <a href="../index.html">Back to Home</a>
+    </footer>
+</body>
+</html>
