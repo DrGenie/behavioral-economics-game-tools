@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speculative Bubbles</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Speculative Bubbles</h1>
+    <canvas id="bubbleChart" width="400" height="200"></canvas>
+    <script>
+        const ctx = document.getElementById('bubbleChart').getContext('2d');
+        const bubbleChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Round 1', 'Round 2', 'Round 3', 'Round 4', 'Round 5'],
+                datasets: [{
+                    label: 'Price',
+                    data: [10, 20, 35, 60, 10],
+                    borderColor: 'blue',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
